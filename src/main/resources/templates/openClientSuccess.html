@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h1>Клиент<br></h1>
+<span>ФИО:  </span><span th:text="${client2.Name}"></span><br>
+<span>Паспорт:  </span><span th:text="${client2.Pasport_Serial}"></span><span>  </span><span th:text="${client2.Pasport_Number}"></span><br>
+<span>Телефон:  </span><span th:text="${client2.Telephone_Number}"></span><br>
+<span>Адрес:  </span><span th:text="${client2.Adress}"></span><br>
+<a href="/mini-bank/main" class="btn btn-secondary btn-sm" type="submit">Вернуться на главную</a>
+
+</body>
+</html>

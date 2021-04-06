@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h1>Счет клиента  </h1> <span th:text="${client.Name}"></span><br>
+<span>Номер счета:  </span><span th:text="${bills2.Num_Bill}"></span><br>
+<span>Сумма:  </span><span th:text="${bills2.Sum_Bills}"></span> <br>
+<span>Дата октрытия:  </span><span th:text="${bills2.Data_Begin}"></span><br>
+<span>Дата закрытия:  </span><span th:text="${bills2.Data_End}"></span><br>
+<a href="/mini-bank/withdraw" class="btn btn-secondary btn-sm" type="submit">Снять</a>
+<a href="/mini-bank/deposit" class="btn btn-secondary btn-sm" type="submit">Внести</a>
+<!--<form  th:action="@{/openBillSuccess}"  method="post">
+    <span>Введите сумму для снятия: </span>
+    <input type="text" th:field="*{transactions.Sum_Transaction}"/>
+    </p>
+    <span>Дату снятия</span>
+    <input type="text" th:field="*{transactions.data_Transaction}"/>
+    </p>
+    <button class="btn btn-secondary btn-sm" type="submit">Снять</button>
+</form>
+</p>-->
+<!--<form  th:action="@{/openBillSuccess}"  method="post">
+    <span>Введите сумму для внесения: </span>
+    <input type="text" th:field="*{transactions.Sum_Transaction}"/>
+    </p>
+    <span>Дату внесения</span>
+    <input type="text" th:field="*{transactions.Data_Transaction}"/>
+    </p>
+    <button class="btn btn-secondary btn-sm" type="submit">Внести</button>
+</form>
+</p>-->
+<a href="/mini-bank/main" class="btn btn-secondary btn-sm" type="submit">Вернуться на главную</a>
+
+</body>
+</html>

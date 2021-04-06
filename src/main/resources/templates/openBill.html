@@ -8,24 +8,27 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </head>
 <body>
-<h1>Открыть данные клиента<br></h1>
-<h2>Введите Фамилию, серию и номер паспорта<br></h2>
+<h1>Клиент<br></h1>
+<span>Открыть счет<br> </span>
 
-
-<form  th:action="@{/openClientSuccess}" th:object="${client}" method="post">
+<form  th:action="@{/openBill}"  method="post">
     <span>ФИО</span>
-    <input type="text" th:field="*{Name}"/>
+    <input type="text" th:field="*{client.Name}"/>
     </p>
     <span>Серия паспорта</span>
-    <input type="text" th:field="*{Pasport_Serial}"/>
+    <input type="text" th:field="*{client.Pasport_Serial}"/>
     </p>
     <span>Номер паспорта</span>
-    <input type="text" th:field="*{Pasport_Number}"/>
+    <input type="text" th:field="*{client.Pasport_Number}"/>
     </p>
+    <span>Номер счета</span>
+    <input type="text" th:field="*{bills.Num_Bill}"/>
+    </p>
+
     <button class="btn btn-secondary btn-sm" type="submit">Открыть</button>
 </form>
 </p>
-
 <a href="/mini-bank/main" class="btn btn-secondary btn-sm" type="submit">Вернуться на главную</a>
+
 </body>
 </html>

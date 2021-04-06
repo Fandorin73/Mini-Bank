@@ -1,14 +1,16 @@
 package appMain.entitis;
 
 import java.util.Date;
-
+/**
+ * Класс - транзакции
+ */
 public class Transactions {
     private long Bill_Id;
     private long Transaction_Id;
     private double Sum_Transaction;
-    private Date Data_Transaction;
+    private String Data_Transaction;
 
-    public Transactions(long bill_Id, long transaction_Id, double sum_Transaction, Date data_Transaction) {
+    public Transactions(long bill_Id, long transaction_Id, double sum_Transaction, String data_Transaction) {
         Bill_Id = bill_Id;
         Transaction_Id = transaction_Id;
         Sum_Transaction = sum_Transaction;
@@ -41,11 +43,11 @@ public class Transactions {
         Sum_Transaction = sum_Transaction;
     }
 
-    public Date getData_Transaction() {
+    public String getData_Transaction() {
         return Data_Transaction;
     }
 
-    public void setData_Transaction(Date data_Transaction) {
+    public void setData_Transaction(String data_Transaction) {
         Data_Transaction = data_Transaction;
     }
 }

@@ -5,10 +5,20 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+/**
+ * Класс Репозиторий "Подключение к базе данных".
+ *
+ * @author Пьянзин Андрей
+ * @version 1.1
+ * @since 12.03.2021
+ */
 public class ConnectionPostrgres {
     public Connection connection;
     public Statement statement;
 
+    /**
+     * метод подключаеться к базе(PostgreSQL)
+     */
     public void connect() throws SQLException {
         try {
             Class.forName("org.postgresql.Driver");
@@ -21,6 +31,9 @@ public class ConnectionPostrgres {
 
     }
 
+    /**
+     * метод отключаеться от базы(PostgreSQL)
+     */
     public void disconnect() throws SQLException {
         try {
             statement.close();

@@ -8,21 +8,21 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </head>
 <body>
-<h1>Открыть данные клиента<br></h1>
-<h2>Введите Фамилию, серию и номер паспорта<br></h2>
+<h1>Внести на счет<br></h1>
+<h2>Введите сумму, дату<br></h2>
 
 
-<form  th:action="@{/openClientSuccess}" th:object="${client}" method="post">
-    <span>ФИО</span>
-    <input type="text" th:field="*{Name}"/>
+<form  th:action="@{/deposit}" method="post">
+    <span>Сумма</span>
+    <input type="text" th:field="*{transactions.Sum_Transaction}"/>
     </p>
-    <span>Серия паспорта</span>
-    <input type="text" th:field="*{Pasport_Serial}"/>
+    <span>Дата</span>
+    <input type="text" th:field="*{transactions.Data_Transaction}"/>
     </p>
-    <span>Номер паспорта</span>
-    <input type="text" th:field="*{Pasport_Number}"/>
+    <span>Подтвердите(введите номер счета)</span>
+    <input type="text" th:field="*{bills.Num_Bill}"/>
     </p>
-    <button class="btn btn-secondary btn-sm" type="submit">Открыть</button>
+    <button class="btn btn-secondary btn-sm" type="submit">Подтвердить внесение средств</button>
 </form>
 </p>
 

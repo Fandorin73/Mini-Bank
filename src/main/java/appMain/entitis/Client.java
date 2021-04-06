@@ -1,7 +1,10 @@
 package appMain.entitis;
 
+/**
+ * Класс - клиент
+ */
 public class Client {
-     private int Id;
+    private int Id;
     private String Name;
     private int Pasport_Serial;
     private int Pasport_Number;
@@ -55,9 +58,11 @@ public class Client {
     public void setAdress(String adress) {
         Adress = adress;
     }
-    public Client(){
+
+    public Client() {
 
     }
+
     public Client(int id, String name, int pasport_Serial, int pasport_Number, String telephone_Number, String adress) {
         Id = id;
         Name = name;
@@ -67,5 +72,16 @@ public class Client {
         Adress = adress;
     }
 
+    @Override
+    public String toString() {
+        return "Client{" +
+                "Id=" + Id +
+                ", Name='" + Name + '\'' +
+                ", Pasport_Serial=" + Pasport_Serial +
+                ", Pasport_Number=" + Pasport_Number +
+                ", Telephone_Number='" + Telephone_Number + '\'' +
+                ", Adress='" + Adress + '\'' +
+                '}';
+    }
 
 }

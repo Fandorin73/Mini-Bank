@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://thymeleaf.org">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,6 +10,30 @@
 </head>
 <body>
 <h1>Новый клиент<br></h1>
+<h2>Введите Фамилию, серию и номер паспорта, телефон, Адрес<br></h2>
+
+
+<form  th:action="@{/newClient}" th:object="${client}" method="post">
+    <span>ФИО</span>
+    <input type="text" th:field="*{Name}"/>
+    </p>
+    <span>Серия паспорта</span>
+    <input type="text" th:field="*{Pasport_Serial}"/>
+    </p>
+    <span>Номер паспорта</span>
+    <input type="text" th:field="*{Pasport_Number}"/>
+    </p>
+    <span>Номер Телефона</span>
+    <input type="text" th:field="*{Telephone_Number}"/>
+    </p>
+    <span>Адрес</span>
+    <input type="text" th:field="*{Adress}"/>
+    </p>
+    <button class="btn btn-secondary btn-sm" type="submit">Создать клиента</button>
+</form>
+</p>
+
+
 <a href="/mini-bank/main" class="btn btn-secondary btn-sm" type="submit">Вернуться на главную</a>
 </body>
 </html>
